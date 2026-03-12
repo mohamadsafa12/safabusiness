@@ -1,484 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safa Business LLC | Wholesale Electronics</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #edf1ed;
-      color: #0d180f;
-      line-height: 1.5;
-    }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safa Business LLC | Wholesale Electronics</title>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(237, 241, 237, 0.95);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      z-index: 10;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 0;
-    }
-    .brand h1 {
-      font-size: 52px;
-      font-weight: 300;
-      letter-spacing: -1px;
-    }
-    .brand p {
-      font-size: 12px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.55);
-      margin-top: 4px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-    }
-    .nav-links a {
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.1);
-      font-size: 14px;
-    }
-    .nav-links .primary {
-      background: #11240f;
-      color: white;
-      border: none;
-    }
+<style>
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 50px;
-      align-items: center;
-      padding: 70px 0;
-    }
-    .badge {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(23,53,27,0.12);
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #17351b;
-      margin-bottom: 18px;
-    }
-    .hero h2 {
-      font-size: 64px;
-      line-height: 1.02;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 20px;
-      color: rgba(0,0,0,0.65);
-      max-width: 650px;
-    }
-    .hero-buttons {
-      margin-top: 28px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-    .btn-dark {
-      background: #11240f;
-      color: white;
-    }
-    .btn-light {
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(0,0,0,0.1);
-      color: #11240f;
-    }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 32px;
-      max-width: 620px;
-    }
-    .stat {
-      background: rgba(255,255,255,0.75);
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 18px;
-      padding: 18px;
-    }
-    .stat small {
-      display: block;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.45);
-      margin-bottom: 8px;
-    }
-    .stat strong {
-      font-size: 20px;
-    }
+body{
+background:#edf1ed;
+color:#0d180f;
+}
 
-    .hero-image img {
-      width: 100%;
-      border-radius: 30px;
-      display: block;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.08);
-    }
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 24px;
+}
 
-    .about {
-      margin: 20px 0 50px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 30px;
-      padding: 40px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-    }
-    .section-label {
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #17351b;
-      margin-bottom: 14px;
-    }
-    .about h3 {
-      font-size: 48px;
-      margin-bottom: 18px;
-    }
-    .about p {
-      font-size: 19px;
-      color: rgba(0,0,0,0.65);
-    }
-    .about-box {
-      background: #f6f8f5;
-      border: 1px solid rgba(0,0,0,0.05);
-      border-radius: 18px;
-      padding: 20px;
-      margin-bottom: 14px;
-    }
-    .about-box strong {
-      display: block;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.45);
-      margin-bottom: 10px;
-    }
+header{
+border-bottom:1px solid rgba(0,0,0,0.1);
+padding:24px 0;
+}
 
-    .products-section {
-      padding: 50px 0 70px;
-    }
-    .products-section h3 {
-      font-size: 72px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .products-section .subtitle {
-      text-align: center;
-      color: rgba(0,0,0,0.6);
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    .card {
-      background: white;
-      border: 1px solid rgba(43,111,154,0.2);
-      border-radius: 26px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    }
-    .card img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      display: block;
-    }
-    .card-content {
-      padding: 22px;
-    }
-    .card h4 {
-      font-size: 34px;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-    .card p {
-      font-size: 16px;
-      color: rgba(0,0,0,0.6);
-    }
+.brand h1{
+font-size:48px;
+font-weight:300;
+}
 
-    .brands {
-      border-top: 1px solid rgba(0,0,0,0.05);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      background: linear-gradient(90deg, rgba(203,224,183,0.55), rgba(233,240,248,0.65), rgba(242,226,221,0.55));
-      padding: 55px 0;
-    }
-    .brands h3 {
-      text-align: center;
-      font-size: 52px;
-      margin-bottom: 30px;
-    }
-    .brand-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 18px;
-    }
-    .brand-box {
-      background: rgba(255,255,255,0.78);
-      border-radius: 24px;
-      min-height: 130px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: bold;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-    }
+.brand p{
+font-size:12px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#666;
+margin-top:4px;
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-    .contact-box {
-      padding: 42px 28px;
-      border-right: 1px solid rgba(0,0,0,0.08);
-      min-height: 250px;
-    }
-    .contact-box:last-child { border-right: none; }
-    .contact-box .icon {
-      font-size: 36px;
-      margin-bottom: 18px;
-    }
-    .contact-box h4 {
-      font-size: 34px;
-      margin-bottom: 16px;
-    }
-    .contact-box p {
-      font-size: 18px;
-      color: rgba(0,0,0,0.65);
-      line-height: 1.8;
-    }
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+padding:80px 0;
+}
 
-    @media (max-width: 1000px) {
-      .hero, .about, .products-grid, .brand-grid, .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .hero h2 { font-size: 48px; }
-      .products-section h3 { font-size: 54px; }
-    }
+.badge{
+display:inline-block;
+background:#ffffffaa;
+border-radius:30px;
+padding:10px 18px;
+font-size:12px;
+letter-spacing:2px;
+margin-bottom:20px;
+}
 
-    @media (max-width: 700px) {
-      .hero, .about, .products-grid, .brand-grid, .contact-grid, .stats {
-        grid-template-columns: 1fr;
-      }
-      .brand h1 { font-size: 38px; }
-      .hero h2 { font-size: 38px; }
-      .products-section h3 { font-size: 42px; }
-      .nav { flex-direction: column; gap: 16px; align-items: flex-start; }
-      .nav-links { flex-wrap: wrap; }
-    }
-  </style>
+.hero h2{
+font-size:64px;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#444;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 26px;
+border-radius:30px;
+display:inline-block;
+font-weight:bold;
+}
+
+.btn-dark{
+background:#0e2a14;
+color:white;
+}
+
+.btn-light{
+border:1px solid #ccc;
+margin-left:10px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:40px;
+}
+
+.stat{
+background:white;
+padding:20px;
+border-radius:14px;
+}
+
+.stat small{
+display:block;
+font-size:11px;
+letter-spacing:2px;
+color:#777;
+margin-bottom:8px;
+}
+
+.stat strong{
+font-size:18px;
+}
+
+.hero img{
+width:100%;
+border-radius:25px;
+}
+
+.products{
+padding:80px 0;
+}
+
+.products h3{
+text-align:center;
+font-size:60px;
+margin-bottom:20px;
+}
+
+.products p{
+text-align:center;
+color:#666;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h4{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.brands{
+background:linear-gradient(90deg,#dcebd1,#e8eef7,#f1e2df);
+padding:60px 0;
+margin-top:60px;
+}
+
+.brands h3{
+text-align:center;
+font-size:50px;
+margin-bottom:30px;
+}
+
+.brand-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:20px;
+}
+
+.brand-box{
+background:white;
+padding:40px;
+text-align:center;
+border-radius:16px;
+font-size:26px;
+font-weight:bold;
+}
+
+.contact{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+margin-top:60px;
+border-top:1px solid #ddd;
+}
+
+.contact-box{
+padding:40px;
+border-right:1px solid #ddd;
+}
+
+.contact-box:last-child{
+border-right:none;
+}
+
+.contact-box h4{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.contact-box p{
+color:#666;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.brand-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.contact{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <h1>Safa Business</h1>
-        <p>Consumer Electronics Wholesale</p>
-      </div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact" class="primary">Contact</a>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <section class="container hero">
-      <div>
-        <div class="badge">Premium And Trusted Distributor</div>
-        <h2>Wholesale electronics for serious buyers and distribution partners.</h2>
-        <p>
-          Safa Business LLC sources and distributes laptops, tablets, Apple devices,
-          gaming products, and related consumer electronics for wholesale, resale,
-          and export operations.
-        </p>
+<header>
+<div class="container">
+<div class="brand">
+<h1>Safa Business</h1>
+<p>Consumer Electronics Wholesale</p>
+</div>
+</div>
+</header>
 
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-dark">Contact Us</a>
-          <a href="#products" class="btn btn-light">View Categories</a>
-        </div>
+<section class="container hero">
 
-        <div class="stats">
-          <div class="stat">
-            <small>Business Model</small>
-            <strong>B2B Wholesale</strong>
-          </div>
-          <div class="stat">
-            <small>Focus</small>
-            <strong>Electronics & Tech</strong>
-          </div>
-          <div class="stat">
-            <small>Markets</small>
-            <strong>U.S. & Export</strong>
-          </div>
-        </div>
-      </div>
+<div>
 
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=1600&q=80" alt="Laptop">
-      </div>
-    </section>
+<div class="badge">PREMIUM AND TRUSTED DISTRIBUTOR</div>
 
-    <section id="about" class="container about">
-      <div>
-        <div class="section-label">About Us</div>
-        <h3>Structured supply for wholesale and export channels.</h3>
-        <p>
-          We work with distributors, resellers, and professional buyers seeking
-          consumer electronics inventory across core categories including laptops,
-          tablets, Apple products, gaming systems, and accessories.
-        </p>
-      </div>
+<h2>
+Wholesale electronics for serious buyers and distribution partners.
+</h2>
 
-      <div>
-        <div class="about-box">
-          <strong>Core Categories</strong>
-          Laptops, tablets, Apple devices, gaming electronics, accessories.
-        </div>
-        <div class="about-box">
-          <strong>Buyer Types</strong>
-          Wholesalers, resellers, procurement teams, and export buyers.
-        </div>
-      </div>
-    </section>
+<p>
+Safa Business LLC sources and distributes laptops, tablets, Apple devices,
+gaming products, and related consumer electronics for wholesale,
+resale, and export operations.
+</p>
 
-    <section id="products" class="container products-section">
-      <h3>Our Products</h3>
-      <p class="subtitle">
-        Product categories aligned with wholesale electronics demand.
-      </p>
+<a class="btn btn-dark">Contact Us</a>
+<a class="btn btn-light">View Categories</a>
 
-      <div class="products-grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=80" alt="Business Laptops">
-          <div class="card-content">
-            <h4>Business Laptops</h4>
-            <p>Dell, Lenovo, HP, ASUS and enterprise-ready notebook inventory.</p>
-          </div>
-        </div>
+<div class="stats">
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80" alt="Apple Devices">
-          <div class="card-content">
-            <h4>Apple Devices</h4>
-            <p>MacBooks, iPads, AirPods, Apple Watches and related accessories.</p>
-          </div>
-        </div>
+<div class="stat">
+<small>BUSINESS MODEL</small>
+<strong>B2B Wholesale</strong>
+</div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?auto=format&fit=crop&w=1200&q=80" alt="Gaming Electronics">
-          <div class="card-content">
-            <h4>Gaming Electronics</h4>
-            <p>Gaming laptops, consoles, monitors and high-demand performance devices.</p>
-          </div>
-        </div>
+<div class="stat">
+<small>FOCUS</small>
+<strong>Electronics & Tech</strong>
+</div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80" alt="Tablets and Mobile Tech">
-          <div class="card-content">
-            <h4>Tablets & Mobile Tech</h4>
-            <p>Wholesale tablet and mobile device supply for retail and export channels.</p>
-          </div>
-        </div>
+<div class="stat">
+<small>MARKETS</small>
+<strong>U.S. & Export</strong>
+</div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80" alt="Audio and Accessories">
-          <div class="card-content">
-            <h4>Audio & Accessories</h4>
-            <p>Chargers, headphones, cases, wearables and complementary electronics.</p>
-          </div>
-        </div>
+</div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Wholesale Distribution">
-          <div class="card-content">
-            <h4>Wholesale Distribution</h4>
-            <p>Structured sourcing for distributors, resellers, exporters and B2B buyers.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section class="brands">
-      <div class="container">
-        <h3>Leading Brands</h3>
-        <div class="brand-grid">
-          <div class="brand-box">Lenovo</div>
-          <div class="brand-box">HP</div>
-          <div class="brand-box">Dell</div>
-          <div class="brand-box">Apple</div>
-          <div class="brand-box">ASUS</div>
-          <div class="brand-box">Acer</div>
-        </div>
-      </div>
-    </section>
+<div>
 
-    <section id="contact" class="contact-grid">
-      <div class="contact-box">
-        <div class="icon">📍</div>
-        <h4>Address</h4>
-        <p>
-          Safa Business LLC<br>
-          Doral, Florida<br>
-          United States
-        </p>
-      </div>
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1600&q=80">
 
-      <div class="contact-box">
-        <div class="icon">☎️</div>
-        <h4>Phone</h4>
-        <p>+1 (___) ___-____</p>
-      </div>
+</div>
 
-      <div class="contact-box">
-        <div class="icon">✉️</div>
-        <h4>Email</h4>
-        <p>info@safabusiness.com</p>
-      </div>
+</section>
 
-      <div class="contact-box">
-        <div class="icon">🤝</div>
-        <h4>Connect</h4>
-        <p>
-          Contact us for wholesale inquiries, sourcing requests, and distribution partnerships.
-        </p>
-      </div>
-    </section>
-  </main>
+<section class="container products">
+
+<h3>Our Products</h3>
+
+<p>Product categories aligned with wholesale electronics demand.</p>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+<div class="card-content">
+<h4>Business Laptops</h4>
+<p>Dell, Lenovo, HP, ASUS and enterprise notebook inventory.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<div class="card-content">
+<h4>Apple Devices</h4>
+<p>MacBooks, iPads, AirPods, Apple Watches and accessories.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603481546579-65d935ba9cdd">
+<div class="card-content">
+<h4>Gaming Electronics</h4>
+<p>Gaming laptops, consoles and high-performance devices.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="brands">
+
+<div class="container">
+
+<h3>Leading Brands</h3>
+
+<div class="brand-grid">
+
+<div class="brand-box">Lenovo</div>
+<div class="brand-box">HP</div>
+<div class="brand-box">Dell</div>
+<div class="brand-box">Apple</div>
+<div class="brand-box">ASUS</div>
+<div class="brand-box">Acer</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<div class="contact-box">
+<h4>Address</h4>
+<p>
+Safa Business LLC<br>
+Doral, Florida<br>
+United States
+</p>
+</div>
+
+<div class="contact-box">
+<h4>Phone</h4>
+<p>+1 (954) 560-0632</p>
+</div>
+
+<div class="contact-box">
+<h4>Email</h4>
+<p>info@safabusiness.com</p>
+</div>
+
+<div class="contact-box">
+<h4>Connect</h4>
+<p>
+Contact us for wholesale inquiries and distribution partnerships.
+</p>
+</div>
+
+</section>
+
 </body>
 </html>
