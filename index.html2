@@ -1,0 +1,78 @@
+export default function SafaBusinessLandingPage() {
+  const products = [
+    {
+      title: "Business Laptops",
+      image:
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Tablets & Mobile Devices",
+      image:
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Gaming Systems",
+      image:
+        "https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Apple Devices",
+      image:
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Audio & Accessories",
+      image:
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Wholesale Inventory",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+    },
+  ];
+
+  const brands = ["Lenovo", "HP", "Dell", "Apple", "ASUS"];
+
+  return (
+    <div className="min-h-screen bg-[#eef1ee] text-[#0d180f]">
+      <header className="sticky top-0 z-20 border-b border-black/5 bg-[#eef1ee]/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+          <div>
+            <div className="text-5xl font-light tracking-tight md:text-6xl">Safa Business</div>
+            <div className="mt-1 text-sm uppercase tracking-[0.35em] text-black/55">
+              Wholesale Electronics
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="#products"
+              className="hidden rounded-full border border-black/10 px-5 py-2 text-sm font-medium hover:bg-black/5 md:inline-flex"
+            >
+              Products
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full bg-[#11240f] px-7 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-14 lg:grid-cols-2 lg:px-10 lg:py-20">
+          <div className="max-w-2xl">
+            <div className="mb-4 inline-flex rounded-full border border-[#17351b]/15 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#17351b]">
+              Trusted B2B Supplier
+            </div>
+            <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+              Premium electronics distribution for wholesale buyers.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-black/65">
+              Safa Business LLC supplies laptops, tablets, Apple devices, gaming products,
+              and related consumer electronics for distributors, resellers, and export
+              markets.
+            </p>
