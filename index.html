@@ -2,50 +2,68 @@ export default function SafaBusinessLandingPage() {
   const products = [
     {
       title: "Business Laptops",
+      subtitle: "Dell, Lenovo, HP, ASUS and enterprise-ready notebook inventory.",
       image:
         "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Tablets & Mobile Devices",
-      image:
-        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "Gaming Systems",
-      image:
-        "https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
       title: "Apple Devices",
+      subtitle: "MacBooks, iPads, AirPods, Apple Watches and related accessories.",
       image:
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80",
     },
     {
+      title: "Gaming Electronics",
+      subtitle: "Gaming laptops, consoles, monitors and high-demand performance devices.",
+      image:
+        "https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Tablets & Mobile Tech",
+      subtitle: "Wholesale tablet and mobile device supply for retail and export channels.",
+      image:
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
       title: "Audio & Accessories",
+      subtitle: "Chargers, headphones, cases, wearables and complementary electronics.",
       image:
         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Wholesale Inventory",
+      title: "Wholesale Distribution",
+      subtitle: "Structured sourcing for distributors, resellers, exporters and B2B buyers.",
       image:
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     },
   ];
 
-  const brands = ["Lenovo", "HP", "Dell", "Apple", "ASUS"];
+  const brands = ["Lenovo", "HP", "Dell", "Apple", "ASUS", "Acer"];
+
+  const stats = [
+    { label: "Business Model", value: "B2B Wholesale" },
+    { label: "Focus", value: "Electronics & Tech" },
+    { label: "Markets", value: "U.S. & Export" },
+  ];
 
   return (
-    <div className="min-h-screen bg-[#eef1ee] text-[#0d180f]">
-      <header className="sticky top-0 z-20 border-b border-black/5 bg-[#eef1ee]/90 backdrop-blur">
+    <div className="min-h-screen bg-[#edf1ed] text-[#0d180f]">
+      <header className="sticky top-0 z-20 border-b border-black/5 bg-[#edf1ed]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <div>
             <div className="text-5xl font-light tracking-tight md:text-6xl">Safa Business</div>
             <div className="mt-1 text-sm uppercase tracking-[0.35em] text-black/55">
-              Wholesale Electronics
+              Consumer Electronics Wholesale
             </div>
           </div>
 
           <div className="flex items-center gap-4">
+            <a
+              href="#about"
+              className="hidden rounded-full border border-black/10 px-5 py-2 text-sm font-medium hover:bg-black/5 md:inline-flex"
+            >
+              About
+            </a>
             <a
               href="#products"
               className="hidden rounded-full border border-black/10 px-5 py-2 text-sm font-medium hover:bg-black/5 md:inline-flex"
@@ -66,15 +84,15 @@ export default function SafaBusinessLandingPage() {
         <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-14 lg:grid-cols-2 lg:px-10 lg:py-20">
           <div className="max-w-2xl">
             <div className="mb-4 inline-flex rounded-full border border-[#17351b]/15 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#17351b]">
-              Trusted B2B Supplier
+              Premium And Trusted Distributor
             </div>
-            <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-              Premium electronics distribution for wholesale buyers.
+            <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
+              Wholesale electronics for serious buyers and distribution partners.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-black/65">
-              Safa Business LLC supplies laptops, tablets, Apple devices, gaming products,
-              and related consumer electronics for distributors, resellers, and export
-              markets.
+              Safa Business LLC sources and distributes laptops, tablets, Apple devices,
+              gaming products, and related consumer electronics for wholesale, resale,
+              and export operations.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -88,8 +106,17 @@ export default function SafaBusinessLandingPage() {
                 href="#products"
                 className="rounded-full border border-black/10 bg-white/60 px-7 py-3 text-base font-medium text-[#11240f] hover:bg-white"
               >
-                View Products
+                View Categories
               </a>
+            </div>
+
+            <div className="mt-10 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
+              {stats.map((item) => (
+                <div key={item.label} className="rounded-2xl border border-black/5 bg-white/70 p-4 shadow-sm">
+                  <div className="text-xs uppercase tracking-[0.24em] text-black/45">{item.label}</div>
+                  <div className="mt-2 text-lg font-semibold">{item.value}</div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -106,12 +133,41 @@ export default function SafaBusinessLandingPage() {
           </div>
         </section>
 
+        <section id="about" className="mx-auto max-w-7xl px-6 py-4 lg:px-10 lg:py-8">
+          <div className="grid grid-cols-1 gap-6 rounded-[2rem] border border-black/5 bg-white/70 p-8 shadow-sm lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.32em] text-[#17351b]">About Us</div>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+                Structured supply for wholesale and export channels.
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-black/65">
+                We work with distributors, resellers, and professional buyers seeking
+                consumer electronics inventory across core categories including laptops,
+                tablets, Apple products, gaming systems, and accessories.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="rounded-2xl border border-black/5 bg-[#f6f8f5] p-5">
+                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-black/45">
+                  Core Categories
+                </div>
+                <div className="mt-3 text-lg leading-8">Laptops, tablets, Apple devices, gaming electronics, accessories.</div>
+              </div>
+              <div className="rounded-2xl border border-black/5 bg-[#f6f8f5] p-5">
+                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-black/45">
+                  Buyer Types
+                </div>
+                <div className="mt-3 text-lg leading-8">Wholesalers, resellers, procurement teams, and export buyers.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="products" className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-16">
           <div className="text-center">
             <h2 className="text-5xl font-semibold tracking-tight md:text-7xl">Our Products</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-black/60">
-              Curated product categories for retail partners, resellers, and wholesale
-              distribution channels.
+              Product categories aligned with wholesale electronics demand.
             </p>
           </div>
 
@@ -124,6 +180,7 @@ export default function SafaBusinessLandingPage() {
                 <img src={product.image} alt={product.title} className="h-80 w-full object-cover" />
                 <div className="p-6">
                   <h3 className="text-3xl font-medium leading-tight">{product.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-black/60">{product.subtitle}</p>
                 </div>
               </div>
             ))}
@@ -135,7 +192,7 @@ export default function SafaBusinessLandingPage() {
             <h3 className="text-center text-4xl font-semibold tracking-tight md:text-5xl">
               Leading Brands
             </h3>
-            <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+            <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
               {brands.map((brand) => (
                 <div
                   key={brand}
@@ -170,14 +227,14 @@ export default function SafaBusinessLandingPage() {
           <div className="border-b border-black/10 px-8 py-12 xl:border-b-0 xl:border-r">
             <div className="text-4xl">✉️</div>
             <h4 className="mt-6 text-3xl font-medium">Email</h4>
-            <p className="mt-4 text-lg leading-8 text-black/65">info@yourdomain.com</p>
+            <p className="mt-4 text-lg leading-8 text-black/65">info@safabusiness.com</p>
           </div>
 
           <div className="px-8 py-12">
             <div className="text-4xl">🤝</div>
             <h4 className="mt-6 text-3xl font-medium">Connect</h4>
             <p className="mt-4 text-lg leading-8 text-black/65">
-              Reach out for wholesale inquiries, export opportunities, and distribution
+              Contact us for wholesale inquiries, sourcing requests, and distribution
               partnerships.
             </p>
           </div>
